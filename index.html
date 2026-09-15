@@ -259,6 +259,92 @@
     </div>
   </section>
 
+  <!-- ANINDA RANDEVU OLUŞTUR (WhatsApp Randevu Formu) -->
+  <section id="randevu-formu" class="py-20 bg-[#F4E8EB]/30">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-10">
+        <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B232A]">
+          Anında Randevu Oluştur
+        </h2>
+        <p class="text-sm sm:text-base text-[#2B232A]/75 mt-4 max-w-xl mx-auto leading-relaxed">
+          Aşağıdaki formu doldurarak tarih ve saatinizi belirleyin. Talebiniz anında WhatsApp hattımıza iletilecek ve <strong class="font-semibold text-[#2B232A]">randevunuz onaylanacaktır.</strong>
+        </p>
+      </div>
+
+      <form id="randevuForm" class="bg-white rounded-3xl border border-[#E8D5C4]/60 shadow-xl p-6 sm:p-10 space-y-6">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <!-- Adınız Soyadınız -->
+          <div>
+            <label for="randevuAd" class="block text-xs font-bold uppercase tracking-wider text-[#2B232A]/70 mb-2">Adınız Soyadınız</label>
+            <input type="text" id="randevuAd" name="randevuAd" required placeholder="Örn: Ayşe Yılmaz"
+                   class="w-full px-4 py-3.5 rounded-xl bg-[#FAFAFA] border border-[#E8D5C4] text-sm text-[#2B232A] placeholder:text-[#2B232A]/40 focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all">
+          </div>
+
+          <!-- İstediğiniz Hizmet -->
+          <div>
+            <label for="randevuHizmet" class="block text-xs font-bold uppercase tracking-wider text-[#2B232A]/70 mb-2">İstediğiniz Hizmet</label>
+            <select id="randevuHizmet" name="randevuHizmet" required
+                    class="w-full px-4 py-3.5 rounded-xl bg-[#FAFAFA] border border-[#E8D5C4] text-sm text-[#2B232A] focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all">
+              <option value="" disabled selected>Hizmet seçiniz</option>
+              <option value="Özel Tasarım Nail Art & Jel Protez">Özel Tasarım Nail Art & Jel Protez</option>
+              <option value="Kalıcı Oje & Medikal Manikür">Kalıcı Oje & Medikal Manikür</option>
+              <option value="Kaş & Kirpik Bakım Protokolleri">Kaş & Kirpik Bakım Protokolleri</option>
+              <option value="Diğer / Bilgi Almak İstiyorum">Diğer / Bilgi Almak İstiyorum</option>
+            </select>
+          </div>
+
+          <!-- Tercih Edilen Tarih -->
+          <div>
+            <label for="randevuTarih" class="block text-xs font-bold uppercase tracking-wider text-[#2B232A]/70 mb-2">Tercih Edilen Tarih</label>
+            <input type="date" id="randevuTarih" name="randevuTarih" required
+                   class="w-full px-4 py-3.5 rounded-xl bg-[#FAFAFA] border border-[#E8D5C4] text-sm text-[#2B232A] focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all">
+          </div>
+
+          <!-- Tercih Edilen Saat -->
+          <div>
+            <label for="randevuSaat" class="block text-xs font-bold uppercase tracking-wider text-[#2B232A]/70 mb-2">Tercih Edilen Saat</label>
+            <select id="randevuSaat" name="randevuSaat" required
+                    class="w-full px-4 py-3.5 rounded-xl bg-[#FAFAFA] border border-[#E8D5C4] text-sm text-[#2B232A] focus:outline-none focus:border-[#D4AF37] focus:ring-2 focus:ring-[#D4AF37]/20 transition-all">
+              <option value="" disabled selected>Saat seçiniz</option>
+              <option value="10:00">10:00</option>
+              <option value="10:30">10:30</option>
+              <option value="11:00">11:00</option>
+              <option value="11:30">11:30</option>
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Gönder Butonu -->
+        <button type="submit"
+                class="w-full inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1FAF57] text-white py-4 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>WhatsApp ile Randevu Oluştur</span>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
   <!-- 3. HAKKIMIZDA & İÇERİK BÖLÜMÜ -->
   <section id="hakkimizda" class="py-20 bg-white border-y border-[#E8D5C4]/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -919,6 +1005,39 @@
         header.classList.remove('shadow-md');
       }
     });
+
+    // ANINDA RANDEVU FORMU - WhatsApp Gönderimi
+    const randevuForm = document.getElementById('randevuForm');
+    if (randevuForm) {
+      randevuForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const ad = document.getElementById('randevuAd').value.trim();
+        const hizmet = document.getElementById('randevuHizmet').value;
+        const tarihRaw = document.getElementById('randevuTarih').value;
+        const saat = document.getElementById('randevuSaat').value;
+
+        // gg.aa.yyyy formatına çevir
+        let tarih = tarihRaw;
+        if (tarihRaw) {
+          const [yil, ay, gun] = tarihRaw.split('-');
+          tarih = `${gun}.${ay}.${yil}`;
+        }
+
+        const mesaj =
+          `Merhaba, Vero Tırnak Studio üzerinden randevu talebim var:\n\n` +
+          `Ad Soyad: ${ad}\n` +
+          `Hizmet: ${hizmet}\n` +
+          `Tarih: ${tarih}\n` +
+          `Saat: ${saat}\n\n` +
+          `Randevumu onaylayabilir misiniz?`;
+
+        const numara = '5330566639';
+        const whatsappUrl = `https://wa.me/${numara}?text=${encodeURIComponent(mesaj)}`;
+
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      });
+    }
   </script>
 </body>
 </html>
