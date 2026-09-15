@@ -3,116 +3,362 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vero Tırnak Studio | Özel Tasarım Nail Art & Medikal Manikür</title>
+  <title>Vero Tırnak Studio | Sanatsal Dokunuş & Kişiye Özel Nail Art</title>
+  <meta name="description" content="Vero Tırnak Studio - Protez tırnak, kalıcı oje, medikal manikür ve trend nail art tasarımlarıyla ellerinize sanatsal dokunuş. Hemen WhatsApp'tan randevu alın.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts (Playfair Display & Plus Jakarta Sans) -->
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          colors: {
+            brand: {
+              rose: '#F4E8EB',
+              nude: '#E8D5C4',
+              gold: '#D4AF37',
+              rosegold: '#E0A96D',
+              dark: '#2B232A',
+              light: '#FAFAFA',
+              cream: '#FDFBF9'
+            }
+          },
           fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-            'serif-luxury': ['Playfair Display', 'serif'],
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           }
         }
       }
     }
   </script>
+
   <style>
+    body {
+      background-color: #FAFAFA;
+      color: #2B232A;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-serif-luxury {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #B38F2D 0%, #D4AF37 50%, #E0A96D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #D4AF37 0%, #C99B30 100%);
+    }
     .luxury-card {
-      background: #ffffff;
-      border: 1px solid rgba(232, 213, 196, 0.6);
-      transition: all 0.3s ease;
+      background: #FFFFFF;
+      border: 1px solid rgba(224, 169, 109, 0.22);
+      transition: all 0.35s ease;
     }
     .luxury-card:hover {
       border-color: #D4AF37;
-      box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(43, 35, 42, 0.08);
+    }
+    .glass-nav {
+      background: rgba(250, 250, 250, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .custom-shadow {
+      box-shadow: 0 10px 40px -10px rgba(212, 175, 55, 0.15);
     }
   </style>
 </head>
-<body class="bg-[#FAFAFA] text-[#2B232A] font-sans antialiased pb-16 md:pb-0">
+<body class="antialiased selection:bg-[#E8D5C4] selection:text-[#2B232A] pb-20 md:pb-0">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-[#2B232A] text-[#E8D5C4] text-xs py-2 px-4 text-center tracking-widest uppercase font-medium flex items-center justify-center gap-3">
+    <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-ping"></span>
+    <span>Kişiye Özel Butik Tasarımlar & Steril Hizmet Standartları</span>
+    <span class="hidden sm:inline text-[#D4AF37]">•</span>
+    <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" class="hidden sm:inline hover:text-white underline decoration-[#D4AF37] underline-offset-4">Hemen Randevu Alın</a>
+  </div>
 
   <!-- HEADER / NAVBAR -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-[#E8D5C4]/40 transition-all">
+  <header class="sticky top-0 z-40 glass-nav border-b border-[#E8D5C4]/40 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#" class="font-serif-luxury text-2xl font-bold text-[#2B232A] tracking-wider">
-        Vero Tırnak Studio
-      </a>
       
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-[#2B232A]/80">
-        <a href="#hakkimizda" class="hover:text-[#D4AF37] transition-colors">Hakkımızda</a>
-        <a href="#hizmetler" class="hover:text-[#D4AF37] transition-colors">Hizmetlerimiz</a>
-        <a href="#instagram" class="hover:text-[#D4AF37] transition-colors">Instagram</a>
-        <a href="#yorumlar" class="hover:text-[#D4AF37] transition-colors">Yorumlar</a>
-        <a href="#iletisim" class="hover:text-[#D4AF37] transition-colors">İletişim</a>
+      <!-- Brand Logo -->
+      <a href="#" class="group flex flex-col">
+        <span class="font-serif-luxury text-2xl sm:text-3xl font-bold tracking-wider text-[#2B232A] group-hover:text-[#D4AF37] transition-colors">
+          Vero Tırnak Studio
+        </span>
+        <span class="text-[10px] uppercase tracking-[0.25em] text-[#2B232A]/70 font-semibold -mt-1">
+          Nail Art & Beauty Atelier
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-[#2B232A]/85">
+        <a href="#hakkimizda" class="hover:text-[#D4AF37] transition-colors py-1">Hakkımızda</a>
+        <a href="#hizmetler" class="hover:text-[#D4AF37] transition-colors py-1">Hizmetler</a>
+        <a href="#instagram" class="hover:text-[#D4AF37] transition-colors py-1">Instagram</a>
+        <a href="#yorumlar" class="hover:text-[#D4AF37] transition-colors py-1">Müşteri Yorumları</a>
+        <a href="#iletisim" class="hover:text-[#D4AF37] transition-colors py-1">İletişim</a>
       </nav>
 
-      <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex items-center gap-2 bg-[#2B232A] hover:bg-[#D4AF37] text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300">
-        <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
-        <span>Randevu Al</span>
-      </a>
+      <!-- Desktop Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://www.instagram.com/vero_beauty_house/" target="_blank" rel="noopener noreferrer" 
+           class="p-2.5 rounded-full text-[#2B232A] bg-[#F4E8EB] hover:bg-[#E8D5C4] hover:text-[#2B232A] transition-all duration-300 flex items-center justify-center"
+           title="Instagram Hesabımız" aria-label="Instagram">
+          <i class="fa-brands fa-instagram text-lg"></i>
+        </a>
+        <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-[#2B232A] text-white hover:bg-[#D4AF37] px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-sm hover:shadow-md">
+          <i class="fa-brands fa-whatsapp text-sm text-[#25D366]"></i>
+          <span>WhatsApp Randevu</span>
+        </a>
+      </div>
 
-      <!-- Mobil Menü Butonu -->
-      <button id="mobileMenuBtn" class="md:hidden text-[#2B232A] p-2 focus:outline-none">
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" aria-label="Menüyü Aç" class="lg:hidden p-2 rounded-lg text-[#2B232A] hover:bg-[#F4E8EB] focus:outline-none">
         <i class="fa-solid fa-bars-staggered text-xl"></i>
       </button>
     </div>
 
-    <!-- Mobil Açılır Menü -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-[#E8D5C4]/40 px-4 pt-2 pb-6 space-y-3">
-      <a href="#hakkimizda" class="mobile-nav-link block text-sm font-medium text-[#2B232A] py-1">Hakkımızda</a>
-      <a href="#hizmetler" class="mobile-nav-link block text-sm font-medium text-[#2B232A] py-1">Hizmetlerimiz</a>
-      <a href="#instagram" class="mobile-nav-link block text-sm font-medium text-[#2B232A] py-1">Instagram</a>
-      <a href="#yorumlar" class="mobile-nav-link block text-sm font-medium text-[#2B232A] py-1">Yorumlar</a>
-      <a href="#iletisim" class="mobile-nav-link block text-sm font-medium text-[#2B232A] py-1">İletişim</a>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-[#E8D5C4]/30 bg-[#FAFAFA] px-6 py-6 transition-all duration-300">
+      <nav class="flex flex-col space-y-4 text-base font-medium text-[#2B232A]">
+        <a href="#hakkimizda" class="mobile-nav-link py-2 border-b border-gray-100 flex items-center justify-between">Hakkımızda <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></a>
+        <a href="#hizmetler" class="mobile-nav-link py-2 border-b border-gray-100 flex items-center justify-between">Hizmetler <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></a>
+        <a href="#instagram" class="mobile-nav-link py-2 border-b border-gray-100 flex items-center justify-between">Instagram <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></a>
+        <a href="#yorumlar" class="mobile-nav-link py-2 border-b border-gray-100 flex items-center justify-between">Müşteri Yorumları <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></a>
+        <a href="#iletisim" class="mobile-nav-link py-2 border-b border-gray-100 flex items-center justify-between">İletişim & Lokasyon <i class="fa-solid fa-chevron-right text-xs text-gray-400"></i></a>
+      </nav>
+      <div class="mt-6 pt-4 flex flex-col gap-3">
+        <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-[#2B232A] text-white py-3 rounded-full text-xs uppercase tracking-wider font-semibold">
+          <i class="fa-brands fa-whatsapp text-base text-[#25D366]"></i> WhatsApp Randevu
+        </a>
+        <a href="https://www.instagram.com/vero_beauty_house/" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-[#F4E8EB] text-[#2B232A] py-3 rounded-full text-xs uppercase tracking-wider font-semibold">
+          <i class="fa-brands fa-instagram text-base"></i> @vero_beauty_house
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="py-20 bg-gradient-to-b from-[#F4E8EB]/30 to-transparent">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <span class="text-xs uppercase tracking-[0.3em] font-semibold text-[#D4AF37] block mb-3">Butik &amp; Hijyenik Bakım Deneyimi</span>
-      <h1 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2B232A] leading-tight mb-6">
-        Ellerinizdeki Estetik &amp; Kusursuz Zarafet
-      </h1>
-      <p class="text-base sm:text-lg text-[#2B232A]/75 max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-        Kişiye özel nail art tasarımları, tırnak sağlığını koruyan medikal manikür protokolleri ve uzun süre kalıcı profesyonel çözümler.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#2B232A] hover:bg-[#D4AF37] text-white px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-lg">
-          <i class="fa-brands fa-whatsapp text-lg text-[#25D366]"></i>
-          <span>WhatsApp Randevu</span>
-        </a>
-        <a href="#hizmetler" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white border border-[#E8D5C4] hover:border-[#2B232A] text-[#2B232A] px-8 py-4 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300">
-          <span>Hizmetleri İncele</span>
-        </a>
+  <!-- 2. HERO SECTION -->
+  <section class="relative pt-8 pb-16 lg:py-24 overflow-hidden bg-gradient-to-b from-[#FAFAFA] via-[#FDFBF9] to-[#F4E8EB]/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F4E8EB] border border-[#E8D5C4] text-[#2B232A] text-xs font-semibold tracking-wider uppercase">
+            <span class="w-2 h-2 rounded-full bg-[#D4AF37]"></span>
+            Kişiye Özel Butik Tırnak Tasarımı
+          </div>
+
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl lg:text-6xl font-bold text-[#2B232A] leading-[1.15] tracking-tight">
+            Tırnaklarınıza Ve Ellerinize <span class="italic font-normal gold-gradient-text block sm:inline">Sanatsal Dokunuş</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#2B232A]/75 font-normal max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Protez tırnak, kalıcı oje, medikal manikür ve kişiye özel trend nail art tasarımlarımızla tarzınızı tırnaklarınıza yansıtın.
+          </p>
+
+          <!-- 3 Ana Buton -->
+          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            
+            <!-- 1. Hızlı WhatsApp Randevu Butonu -->
+            <a href="https://wa.me/5330566639" target="_blank" rel="noopener noreferrer" 
+               class="group relative inline-flex items-center justify-center gap-3 bg-[#2B232A] hover:bg-[#D4AF37] text-white px-7 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <i class="fa-brands fa-whatsapp text-lg text-[#25D366] group-hover:text-white transition-colors"></i>
+              <span>Hızlı Randevu Al</span>
+            </a>
+
+            <!-- 2. Instagram Profil Butonu -->
+            <a href="https://www.instagram.com/vero_beauty_house/" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center justify-center gap-2.5 bg-white border border-[#E8D5C4] hover:border-[#D4AF37] text-[#2B232A] px-6 py-3.5 rounded-full text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#F4E8EB]/50">
+              <i class="fa-brands fa-instagram text-base text-[#D4AF37]"></i>
+              <span>Instagram Profil</span>
+            </a>
+
+            <!-- 3. Haritada Yol Tarifi Al Butonu -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Vero+Tirnak+Studio" target="_blank" rel="noopener noreferrer" 
+               class="inline-flex items-center justify-center gap-2.5 bg-transparent border border-[#2B232A]/20 hover:border-[#2B232A] text-[#2B232A] px-5 py-3.5 rounded-full text-sm font-medium tracking-wide transition-all duration-300 hover:bg-white/60">
+              <i class="fa-solid fa-location-dot text-sm text-[#2B232A]/70"></i>
+              <span>Yol Tarifi Al</span>
+            </a>
+
+          </div>
+
+          <!-- Mini Güven İbareleri -->
+          <div class="pt-6 border-t border-[#E8D5C4]/60 grid grid-cols-3 gap-2 sm:gap-6 text-center lg:text-left">
+            <div>
+              <p class="font-serif-luxury text-2xl lg:text-3xl font-bold text-[#2B232A]">100%</p>
+              <p class="text-xs text-[#2B232A]/70 font-medium">Steril Ekipman</p>
+            </div>
+            <div>
+              <p class="font-serif-luxury text-2xl lg:text-3xl font-bold text-[#2B232A]">4-6 Hafta</p>
+              <p class="text-xs text-[#2B232A]/70 font-medium">Kalıcılık Süresi</p>
+            </div>
+            <div>
+              <p class="font-serif-luxury text-2xl lg:text-3xl font-bold text-[#2B232A]">4.9 / 5</p>
+              <p class="text-xs text-[#2B232A]/70 font-medium">Google Puanı</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual (Kural gereği görseller yalnızca Hero ve İçerikler bölümünde) -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md lg:max-w-none">
+            
+            <!-- Dekoratif Arka Plan Çerçevesi -->
+            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-[#E8D5C4] via-[#F4E8EB] to-[#FAFAFA] blur-xl opacity-70"></div>
+            
+            <!-- Görsel Kartı: Referans Görsel (Entegre edilen gerçek çalışma görseli) -->
+            <div class="relative rounded-3xl overflow-hidden border-2 border-[#E8D5C4] shadow-2xl bg-white">
+              <img 
+                src="https://www.designarena.ai/u/47f4f5ad-c24f-43f0-861e-ef0562b12809" 
+                alt="Vero Tırnak Studio - Sanatsal Badem Tırnak ve Değişim Uygulaması" 
+                class="w-full h-[480px] sm:h-[520px] object-cover object-center transform transition duration-700 hover:scale-105"
+                loading="eager"
+              />
+              
+              <!-- Görsel Üzeri Rozet -->
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-[#E8D5C4] shadow-lg flex items-center justify-between">
+                <div>
+                  <div class="flex items-center gap-1 text-[#D4AF37] text-xs mb-1">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="font-semibold text-sm text-[#2B232A]">Kusursuz Değişim & İşçilik</p>
+                  <p class="text-[11px] text-[#2B232A]/70">Doğal forma zarar vermeyen tırnak estetiği</p>
+                </div>
+                <a href="https://wa.me/5330566639" class="w-10 h-10 rounded-full bg-[#2B232A] text-white flex items-center justify-center hover:bg-[#D4AF37] transition-colors" title="Randevu İste">
+                  <i class="fa-solid fa-arrow-right -rotate-45 text-sm"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- HAKKIMIZDA SECTION -->
-  <section id="hakkimizda" class="py-16 bg-white border-y border-[#E8D5C4]/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <span class="text-xs uppercase tracking-[0.25em] font-semibold text-[#D4AF37] block mb-2">Hakkımızda</span>
-      <h2 class="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#2B232A] mb-4">Sağlıkla Işıldayan Tırnaklar</h2>
-      <p class="text-sm sm:text-base text-[#2B232A]/75 leading-relaxed max-w-2xl mx-auto">
-        Vero Tırnak Studio olarak önceliğimiz, tırnak yapınıza zarar vermeden en hijyenik ekipmanlar ve kaliteli ürünlerle doğal güzelliğinizi ön plana çıkarmaktır. Her misafirimiz için özel paketlerde sterilize edilmiş aletler kullanılır.
-      </p>
+  <!-- 3. HAKKIMIZDA & İÇERİK BÖLÜMÜ -->
+  <section id="hakkimizda" class="py-20 bg-white border-y border-[#E8D5C4]/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- İçerik Görseli (Görsel Kuralına Uygun Olarak 1 Adet Yüksek Kaliteli Nail Art Görseli) -->
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative">
+            <div class="absolute -top-4 -left-4 w-32 h-32 bg-[#F4E8EB] rounded-full filter blur-xl"></div>
+            <div class="relative rounded-2xl overflow-hidden border border-[#E8D5C4] shadow-xl">
+              <img 
+                src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80" 
+                alt="Vero Tırnak Studio Hijyenik ve Profesyonel Manikür Alanı" 
+                class="w-full h-[420px] object-cover object-center"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#2B232A]/70 via-transparent to-transparent flex items-end p-6">
+                <div class="text-white">
+                  <span class="inline-block px-3 py-1 bg-[#D4AF37] text-white text-[11px] font-bold uppercase tracking-wider rounded mb-2">Hassas İşçilik</span>
+                  <p class="font-serif-luxury text-xl font-normal italic">"Elleriniz en değerli imzanızdır."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hakkımızda Metin ve Detaylar -->
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#D4AF37] block">Hakkımızda & Felsefemiz</span>
+          
+          <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B232A] leading-snug">
+            Zarafeti ve Kusursuz Hijyeni Bir Araya Getiriyoruz
+          </h2>
+
+          <p class="text-base text-[#2B232A]/80 leading-relaxed font-normal">
+            <strong class="font-semibold text-[#2B232A]">Vero Tırnak Studio</strong> olarak, tırnak bakımını sıradan bir rutin olmaktan çıkarıp kişisel bir sanat formuna dönüştürüyoruz. Stüdyomuzda her uygulama; kişinin kendi tırnak yapısı, el anatomisi ve stil tercihleri gözetilerek özenle tasarlanır.
+          </p>
+
+          <p class="text-base text-[#2B232A]/80 leading-relaxed font-normal">
+            Güzellik anlayışımızın merkezinde <span class="text-[#2B232A] font-semibold underline decoration-[#D4AF37]/50 underline-offset-4">koşulsuz hijyen</span> ve üst segment Avrupa standartlarında ithal ürünler yer alır. Tırnak sağlığınızdan asla ödün vermeden, kalıcı ve büyüleyici sonuçlar vadediyoruz.
+          </p>
+
+          <!-- Öne Çıkan 4 Özellik Kartı (İkonlu, sade ve görselsiz) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            
+            <!-- Özellik 1 -->
+            <div class="luxury-card p-4 rounded-xl flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#F4E8EB] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm text-[#2B232A]">Özel Tasarım Nail Art Sanatı</h3>
+                <p class="text-xs text-[#2B232A]/70 mt-1 leading-snug">İnce fırça işçiliği ve trend desenlerle tamamen size özel çalışmalar.</p>
+              </div>
+            </div>
+
+            <!-- Özellik 2 -->
+            <div class="luxury-card p-4 rounded-xl flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#F4E8EB] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <i class="fa-solid fa-shield-virus text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm text-[#2B232A]">%100 Steril & Hijyenik Ekipmanlar</h3>
+                <p class="text-xs text-[#2B232A]/70 mt-1 leading-snug">Tıbbi standartlarda sterilizatörler ve kişiye özel tek kullanımlık törpüler.</p>
+              </div>
+            </div>
+
+            <!-- Özellik 3 -->
+            <div class="luxury-card p-4 rounded-xl flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#F4E8EB] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <i class="fa-solid fa-heart text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm text-[#2B232A]">Müşteri Memnuniyeti Odaklı</h3>
+                <p class="text-xs text-[#2B232A]/70 mt-1 leading-snug">Rahat, butik, samimi bir stüdyo ortamı ve birebir ilgi.</p>
+              </div>
+            </div>
+
+            <!-- Özellik 4 -->
+            <div class="luxury-card p-4 rounded-xl flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#F4E8EB] flex items-center justify-center flex-shrink-0 text-[#D4AF37]">
+                <i class="fa-solid fa-gem text-lg"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm text-[#2B232A]">Kalıcı & Kaliteli Malzeme</h3>
+                <p class="text-xs text-[#2B232A]/70 mt-1 leading-snug">Hipoalerjenik, soyulma yapmayan ve tırnağı sarartmayan premium ürünler.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- 4. HİZMETLERİMİZ SECTION -->
+  <!-- 4. HİZMETLERİMİZ BÖLÜMÜ (GÖRSELSİZ, SADE KART TASARIMLARI) -->
   <section id="hizmetler" class="py-20 bg-[#FAFAFA]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -120,7 +366,7 @@
       <div class="text-center max-w-2xl mx-auto mb-16">
         <span class="text-xs uppercase tracking-[0.25em] font-semibold text-[#D4AF37] block mb-2">Hizmet Yelpazemiz</span>
         <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2B232A]">
-          Stil Sahibi Tırnak &amp; Bakım Hizmetleri
+          Stil Sahibi Tırnak & Bakım Hizmetleri
         </h2>
         <div class="w-16 h-0.5 bg-[#D4AF37] mx-auto mt-4 mb-4"></div>
         <p class="text-sm sm:text-base text-[#2B232A]/70">
@@ -141,7 +387,7 @@
             </div>
             
             <h3 class="font-serif-luxury text-2xl font-bold text-[#2B232A] mb-3">
-              Özel Tasarım Nail Art &amp; Jel Protez
+              Özel Tasarım Nail Art & Jel Protez
             </h3>
             
             <p class="text-sm text-[#2B232A]/75 leading-relaxed mb-6 font-normal">
@@ -186,7 +432,7 @@
             </div>
             
             <h3 class="font-serif-luxury text-2xl font-bold text-[#2B232A] mb-3">
-              Kalıcı Oje &amp; Medikal Manikür
+              Kalıcı Oje & Medikal Manikür
             </h3>
             
             <p class="text-sm text-[#2B232A]/75 leading-relaxed mb-6 font-normal">
@@ -229,7 +475,7 @@
             </div>
             
             <h3 class="font-serif-luxury text-2xl font-bold text-[#2B232A] mb-3">
-              Kaş &amp; Kirpik Bakım Protokolleri
+              Kaş & Kirpik Bakım Protokolleri
             </h3>
             
             <p class="text-sm text-[#2B232A]/75 leading-relaxed mb-6 font-normal">
@@ -238,10 +484,10 @@
 
             <ul class="text-xs text-[#2B232A]/80 space-y-2 mb-8">
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-[#D4AF37]"></i> İpek Kirpik &amp; Kirpik Lifting
+                <i class="fa-solid fa-check text-[#D4AF37]"></i> İpek Kirpik & Kirpik Lifting
               </li>
               <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-[#D4AF37]"></i> Kaş Laminasyonu &amp; Şekillendirme
+                <i class="fa-solid fa-check text-[#D4AF37]"></i> Kaş Laminasyonu & Şekillendirme
               </li>
               <li class="flex items-center gap-2">
                 <i class="fa-solid fa-check text-[#D4AF37]"></i> Keratin Besleyici Dolgu Bakımı
@@ -522,17 +768,17 @@
         <div>
           <h4 class="text-sm font-semibold uppercase tracking-wider text-[#D4AF37] mb-4">Hızlı Menü</h4>
           <ul class="space-y-2.5 text-xs text-white/70">
-            <li><a href="#hakkimizda" class="hover:text-white transition-colors">Hakkımızda &amp; Değerlerimiz</a></li>
+            <li><a href="#hakkimizda" class="hover:text-white transition-colors">Hakkımızda & Değerlerimiz</a></li>
             <li><a href="#hizmetler" class="hover:text-white transition-colors">Özel Tasarım Nail Art</a></li>
-            <li><a href="#hizmetler" class="hover:text-white transition-colors">Medikal Manikür &amp; Kalıcı Oje</a></li>
-            <li><a href="#hizmetler" class="hover:text-white transition-colors">Kaş &amp; Kirpik Protokolleri</a></li>
+            <li><a href="#hizmetler" class="hover:text-white transition-colors">Medikal Manikür & Kalıcı Oje</a></li>
+            <li><a href="#hizmetler" class="hover:text-white transition-colors">Kaş & Kirpik Protokolleri</a></li>
             <li><a href="#yorumlar" class="hover:text-white transition-colors">Müşteri Yorumları</a></li>
           </ul>
         </div>
 
-        <!-- Sütun 3: Doğrudan İletişim -->
+        <!-- Sütun 3: Doğrudan İletişim (Kesinlikle 5330566639 formatında) -->
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-[#D4AF37] mb-4">İletişim &amp; Randevu</h4>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-[#D4AF37] mb-4">İletişim & Randevu</h4>
           <ul class="space-y-3 text-xs text-white/80">
             <li class="flex items-start gap-3">
               <i class="fa-solid fa-phone text-[#D4AF37] mt-0.5"></i>
@@ -560,7 +806,7 @@
 
         <!-- Sütun 4: Lokasyon & Harita Butonu -->
         <div>
-          <h4 class="text-sm font-semibold uppercase tracking-wider text-[#D4AF37] mb-4">Konum &amp; Ulaşım</h4>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-[#D4AF37] mb-4">Konum & Ulaşım</h4>
           <p class="text-xs text-white/70 mb-4 leading-relaxed">
             Stüdyomuza kolayca ulaşmak, yol tarifi almak ve çalışma saatlerimizi görmek için haritayı kullanabilirsiniz.
           </p>
@@ -578,7 +824,7 @@
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
         <p>© <span id="currentYear"></span> Vero Tırnak Studio. Tüm hakları saklıdır.</p>
         <div class="flex items-center gap-4">
-          <span class="text-[11px]">Steril &amp; Kişiye Özel Butik Hizmet</span>
+          <span class="text-[11px]">Steril & Kişiye Özel Butik Hizmet</span>
           <span>•</span>
           <a href="https://wa.me/5330566639" class="hover:text-white transition-colors">Randevu Destek</a>
         </div>
@@ -587,7 +833,7 @@
     </div>
   </footer>
 
-  <!-- 8. SABİT MOBİL ALT BAR (FLOATING ACTION BAR) -->
+  <!-- 8. SABİT MOBİL ALT BAR (FLOATING ACTION BAR - Mobilde Sürekli Sabit) -->
   <aside aria-label="Hızlı Erişim Butonları" class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#2B232A]/95 backdrop-blur-md border-t border-[#D4AF37]/40 px-3 py-2.5 shadow-2xl">
     <div class="grid grid-cols-3 gap-2">
       
